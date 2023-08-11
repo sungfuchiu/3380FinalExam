@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // const uri = process.env.ATLAS_URI;
-const uri = process.env.COSMOS_URI
+const uri = process.env.URI
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true,  useUnifiedTopology: true   }
 );
 const connection = mongoose.connection;
