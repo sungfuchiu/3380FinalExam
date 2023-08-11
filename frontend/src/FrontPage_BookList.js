@@ -5,10 +5,9 @@ import BookCard from './BookCard';
 
 function BookList() {
   const [books, setBooks] = useState([]);
-
   useEffect(() => {
     axios
-      .get('https://finalbackend-0hpr.onrender.com')
+      .get(process.env.REACT_APP_BACKEND_URL)
       .then((res) => {
         setBooks(res.data);
       })
